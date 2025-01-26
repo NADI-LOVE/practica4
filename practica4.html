@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--html se dividi en 2 estiquetas principales HEAD Y BODY-->
+<head>
+    <meta charset="UTF-8">
+    <!--Tipo de CODIFICACION de caracteres-->
+    <meta http-equiv="Keywords" content="Senati, ETI, Puno">
+    <!--Palabras CLAVE para las busquedas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Descripción" content="Esta es una pagina ejemplo para SENATi ETI">
+    <!--Informacón general de la WEN-->
+    <title>Inicio - WAIFUS</title>
+    <!--En el HEAD tambien se puede cargar elementos externos al HTML-->
+    <link rel="short icon" href="https://i.ibb.co/LrxRTB1/iconojhon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/9a409a3028.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;/*limita el crecimiento de area de trabajo*/
+        }
+        body{
+            font-family: "Roboto";
+            font-size: 15px;
+        }
+        a{
+            display: inline-block;
+        }
+        p{
+            color:black;
+        }
+        header{
+            padding: 15px 0;
+            position: fixed;/*fija un elemento en todo el html*/
+            top: 0;
+            left: 0;
+            z-index: 2;
+            background-color: white;
+            width: 100%;
+
+        }
+        header .container{
+            /*display: inline-block;/*los elementtos de coloque un lado al otro respetando el ancho*/
+            display: flex;/*acomoda los elementtos hijos */
+            justify-content: space-between;/*se acomenden los elementos de forma horizontal*/
+            align-items: center;/*alinea los elementos de forma horinzontal*/
+        }
+        header .container .logo{
+            width: 150px;
+        }
+        header .container nav a{
+            color: blue;
+            text-decoration: none;/*quita la linea de los enlaces*/
+            margin: 0 15px;
+        }
+        .boton{
+            text-align: center;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+        }
+        .boton.boton-aclaracion{
+            color: white;
+            background-color: blue;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .container{
+            width: 1140px;/*dar el mismo tamaño a todos lo container*/
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px;
+
+        }
+        #inicio{
+            position: relative;
+        }
+        #inicio img{
+            width: 100%;
+            display: block;
+        }
+        #inicio .bloque-inicio{
+            position: absolute;
+            top: 40%;
+            left: 35%;
+            width: 800px;
+            text-align: center;
+            margin-left: -200px;
+        }
+        #inicio .bloque-inicio h1{
+            color: blue;
+            font-size: 35px;
+        }
+        #inicio .bloque-inicio p{
+            color: red;
+            font-size: 20px;
+        }
+
+        /*ESTILO DE NOSOTROS*/
+
+        .seccion{
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        #aclaracion{
+            background-image: url();
+            background-size: cover;/*aproevcha el tamaño*/
+            
+        }
+        #aclaracion p{
+            color: red;
+            text-align:center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+        /*ESTILO DE SERVICIOS*/
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .columna{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .columna-33{
+            width: 33.33%;
+        }
+
+        #servicios .bloque-servicio .bloque-img-servicio img{
+            width: 100%;
+        }
+
+        #servicios .bloque-servicio .bloque-contenido-servicio{
+            padding: 15px;
+            
+        }
+        #servicios .bloque-servicio .bloque-contenido-servicio h3{
+            margin-top: 0px;
+            font-size: 25px;
+        }
+        .boton.boton-servicios{
+            color: blue;
+            background-color:white;
+            font-size: 13px;
+            font-weight: bold;
+            border: 1px solid blue;
+        }
+        .cuadrado-perfecto{
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+
+        }
+        .cuadrado-perfecto img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position:absolute;
+            top: 0;
+            left: 0;
+        }
+        #servicios .bloque-servicio .bloque-img-servicio.cuadrado-perfecto{
+            padding-bottom: 56.25%;
+        }
+        /*ESTILO DE GALERIA*/
+        .container-fluid{
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        #galeria h4{
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: center;
+            position: absolute;
+            top: 40%;
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+            width: 100%;
+        }
+        #galeria img{
+            filter: grayscale(1);
+        }
+        #galeria .cuadrado-perfecto:hover img{
+            filter: grayscale(0);
+        }
+        #galeria .cuadrado-perfecto:hover h4{
+            display: none;
+        }
+        /*ESTILO CONTACTENOS*/
+        .container{
+            position: relative;
+        }
+        #contactenos{
+            position: relative;
+        }
+        #contactenos iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .columna-50{
+            width: 60%;
+        }
+        .empujar-50{
+            margin-left: 60%;
+        }
+        #contactenos form{
+            padding: 60px;
+            background-color: blue;
+        }
+        #contactenos form .form-block{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        #contactenos form .form-block .form-control{
+            display: block;
+            height: 40px;
+            font-size: 16px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            width: 100%;
+            padding: 5px 10px;
+        }
+        #contactenos form .form-block textarea{
+            display: block;
+            height: 40px;
+            font-size: 16px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            width: 100%;
+            padding: 5px 10px;
+        }
+        .boton.boton-contactenos{
+            background-color: white;
+            color: blue;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .bloque-ultimo input:hover{
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /*ESTILO FOOTER*/
+        footer{
+            background-color: blue;
+            color: white;
+            padding-top: 25px;
+            font-size: 13px;
+        }
+        footer .barra-footer{
+            background-color: grey;
+            text-align: center;
+            padding-top: 20px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 20px;
+        }
+        .columna-25{
+            width: 25%;
+        }
+        footer ul{
+            padding-left: 0;
+            list-style: none;
+        }
+        footer ul li{
+            margin-bottom: 5px;
+        }
+        footer .logo-footer{
+            width: 100%;
+        }
+        footer p{
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+        }
+        footer .redes{
+            margin: 0 6px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="https://somoskudasai.com/noticias/cultura-otaku/estas-eran-las-waifus-mas-populares-hace-diez-anos/">
+                <img src="https://i.ibb.co/jMSrj2N/Logo1.jpg" class="logo" alt="logo waifus">
+            </a>
+            <nav>
+                
+                <a href="#inicio">Inicio</a>
+                <a href="#aclaracion">Aclaracion</a>
+                <a href="#principales">Principales</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contactenos">Contáctenos</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+       
+       <section id="inicio">
+            <img src="https://i.ibb.co/47g3W41/banner2.jpg" alt="banner2">
+            <div class="bloque-inicio">
+                <h1>BIENVENIDOS A MIS PERSONAJES FAVORITOS</h1>
+                <P>
+                    ¡Estos son mis personajes favoritos!
+                    
+                </P>
+                <a href="#aclaracion" class="boton boton-aclaracion">Ver Más</a>
+            </div>
+       </section>
+
+       <section id="aclaracion" class="seccion">
+            <div class="container">
+                <p> “Estos son MIS personajes favoritos seguin mi opinion y gustos” 
+                </p>
+            </div>
+       </section>
+
+       <section id="principales" class="seccion">
+        <div class="container">
+            <div class="row">
+                <div class="columna columna-33">
+                    <div class="bloque-servicio">
+                        <div class="bloque-img-servicio cuadrado-perfecto">
+                            <img src="https://i.ibb.co/rZKpvmZ/servicio1.jpg" alt="servicio1">
+                        </div>
+                        <div class="bloque-contenido-servicio">
+                            <h3>ANIME</h3>
+                            <p>
+                            ¡Estos son mis personajes favoritos del anime!  
+                            </p>
+                            <a href="https://es.wikipedia.org/wiki/Anime" class="boton boton-servicios">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="columna columna-33">
+                    <div class="bloque-servicio">
+                        <div class="bloque-img-servicio cuadrado-perfecto">
+                            <img src="https://i.ibb.co/PcRWGn3/servicio2.jpg" alt="servicio2">
+                        </div>
+                        <div class="bloque-contenido-servicio">
+                            <h3>GENSHIN IMPACT</h3>
+                            <p>
+                                ¡Estos son mis personajes favoritos del genshin impact! 
+                            </p>
+                            <a href="https://es.wikipedia.org/wiki/Genshin_Impact" class="boton boton-servicios">Ver más</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="columna columna-33">
+                    <div class="bloque-servicio">
+                        <div class="bloque-img-servicio cuadrado-perfecto">
+                            <img src="https://i.ibb.co/GpzwY6m/servicio3.jpg" alt="servicio3">
+                        </div>
+                        <div class="bloque-contenido-servicio">
+                            <h3>HONKAI: STAR RAIL</h3>
+                            <p>
+                                ¡Estos son mis personajes favoritos del honkai: star rail! 
+                            </p>
+                            <a href="https://es.wikipedia.org/wiki/Honkai:_Star_Rail" class="boton boton-servicios">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+
+
+       <section id="galeria" >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="columna-33">
+                        <div class="cuadrado-perfecto">
+                            <a href="https://go-toubun-no-hanayome.fandom.com/es/wiki/Miku_Nakano">
+                                <img src="https://i.ibb.co/grxQ2qw/galeria1.jpg" alt="galeria1">
+                            </a>
+                            <h4>Miku Nakano</h4>
+                        </div>
+                    </div>
+                    <div class="columna-33">
+                        <div class="cuadrado-perfecto">
+                            <a href="https://go-toubun-no-hanayome.fandom.com/es/wiki/Nino_Nakano">
+                                <img src="https://i.ibb.co/hYL3TZt/galeria2.jpg" alt="galeria2">
+                            </a>
+                            <h4>Nino Nakano</h4>
+                        </div>
+                    </div>
+                    <div class="columna-33">
+                        <div class="cuadrado-perfecto">
+                            <a href="https://genshin-impact.fandom.com/es/wiki/Kujou_Sara">
+                                <img src="https://i.ibb.co/SyFqggg/galeria3.jpg" alt="galeria3">
+                            </a>
+                            <h4>Kujou Sara</h4>
+                        </div>
+                    </div>
+                    <div class="columna-33">
+                        <div class="cuadrado-perfecto">
+                            <a href="https://es.wikipedia.org/wiki/2B_(Nier:_Automata)">
+                                <img src="https://i.ibb.co/mRfScys/galeria4.jpg" alt="galeria4">
+                            </a>
+                            <h4>2B</h4>
+                        </div>
+                    </div>
+                    <div class="columna-33">
+                        <div class="cuadrado-perfecto">
+                            <a href="https://swordartonline.fandom.com/es/wiki/Shino_Asada">
+                                <img src="https://i.ibb.co/qsxQ02q/galeria5.jpg" alt="galeria5">
+                            </a>
+                            <h4>Shion</h4>
+                        </div>
+                    </div>
+                    <div class="columna-33">
+                        <div class="cuadrado-perfecto">
+                            <a href="https://honkai-star-rail.fandom.com/es/wiki/Yukong">
+                                <img src="https://i.ibb.co/bNF6Dcm/galeria6.jpg" alt="galeria6">
+                            </a>
+                            <h4>Yukong</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+
+       <section id="contactenos" class="seccion">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.32915505947!2d139.57605472149564!3d35.66841030790804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sciudad%20de%20Tokio%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses-419!2spe!4v1729285567052!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <div class="container">
+                <div class="row">
+                    <div class="columna columna-50 empujar-50">
+                        <form action="" method="post">
+                            <div class="form-block">
+                                <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="form-block">
+                                <input type="email" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-block">
+                                <textarea name="mensaje" placeholder="Mensaje"></textarea>
+                            </div>
+                            <div class="form-block bloque-ultimo">
+                                <input type="submit" class="boton boton-contactenos" value="Enviar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            
+       </section>
+       
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="columna columna-25">
+                    <img src="https://i.ibb.co/CQmnLJk/imagen-Footer.png" alt="imagen-Footer" alt="foot 1" class="logo-footer">
+                    <p>
+                        ¡Te esperamos para iniciar tu futuro!
+                    </p>
+                </div>
+                <div class="columna columna-25">
+                    <h3>
+                        TEMAS RELACIONADOS
+                    </h3>
+                    <ul>
+                        <li><a href="https://tierragamer.com/noticias/anime/que-es-waifu/">¿Que son waifus?</a></li>
+                        <li><a href="https://es.wikipedia.org/wiki/Genshin_Impact">¿Que es Genshin Impact?</a></li>
+                        <li><a href="https://es.wikipedia.org/wiki/Honkai:_Star_Rail">¿Que es Honbkai: Star Rail?</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="columna columna-25">
+                    <h3>
+                        DATOS DE CONTACTO
+                    </h3>
+                    <ul>
+                        <li>jhonfernandogomezquispe@gmail.com</li>
+                        <li>051-950030579</li>
+                        <li>Av. Estudiante 700 - Salcedo <br>Puno-Peru</li>
+                    </ul>
+                </div>
+                <div class="columna columna-25">
+                    <h3>
+                        REDES SOCIALES
+                    </h3>
+                    <ul class="redes">
+                        <li><a href="https://www.hoyolab.com/accountCenter/postList?id=248161866"><i class="fa-brands fa-facebook"></i></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://chat.whatsapp.com/BZl55QJcRZ98Smz2UVcZkT"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="barra-footer">
+            &copy; Jhon Fernando - PRACTICA
+        </div>
+    </footer>
+
+</body>
+
+</html>
